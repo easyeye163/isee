@@ -26,8 +26,9 @@
 
 ![](https://raw.githubusercontent.com/andreasbm/readme/master/screenshots/lines/rainbow.png)
 
+## 应用
+https://my.feishu.cn/wiki/WspYwUyt7igl7VkLhnic9fsUnRe
 ## 平台兼容性
-
 | H5  | IOS | 安卓 | 微信小程序 | 字节小程序 | 快手小程序 | 支付宝小程序 | 钉钉小程序 | 百度小程序 |
 | --- | --- | ---- | ---------- | ---------- | ---------- | ------------ | ---------- | ---------- |
 | √   | √   | √    | √          | √          | √          | √            | √          | √          |
