@@ -79,25 +79,17 @@
       <div v-if="editingContact.id" class="card" style="margin-top: 20px;">
         <h3>编辑联系人</h3>
         <div class="form-group">
-          <label for="editContactType">联系人类型</label>
-          <select
-            id="editContactType"
+          <!-- <label for="editContactType">联系人类型</label>
+          <picker
             v-model="editingContact.type"
+            :range="['家人', '朋友', '同事', '其他']"
             class="custom-input"
+            style="padding: 10px; border: 1px solid var(--border-color); border-radius: 5px;"
           >
-            <option value="家人">
-              家人
-            </option>
-            <option value="朋友">
-              朋友
-            </option>
-            <option value="同事">
-              同事
-            </option>
-            <option value="其他">
-              其他
-            </option>
-          </select>
+            <view class="picker-display">
+              {{ editingContact.type }}
+            </view>
+          </picker> -->
         </div>
 
         <div class="form-group">
@@ -161,24 +153,16 @@
         <h3>添加新联系人</h3>
         <div class="form-group">
           <label for="contactType">联系人类型</label>
-          <select
-            id="contactType"
+          <picker
             v-model="newContact.type"
+            :range="['家人', '朋友', '同事', '其他']"
             class="custom-input"
+            style="padding: 10px; border: 1px solid var(--border-color); border-radius: 5px;"
           >
-            <option value="家人">
-              家人
-            </option>
-            <option value="朋友">
-              朋友
-            </option>
-            <option value="同事">
-              同事
-            </option>
-            <option value="其他">
-              其他
-            </option>
-          </select>
+            <view class="picker-display">
+              {{ newContact.type }}
+            </view>
+          </picker>
         </div>
 
         <div class="form-group">
