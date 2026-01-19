@@ -1,0 +1,471 @@
+/* 全局样式 */
+:root {
+  --primary-color: #4a90e2;
+  --secondary-color: #f5a623;
+  --background-color: #f8f9fa;
+  --card-background: #ffffff;
+  --text-color: #333333;
+  --text-light: #666666;
+  --border-color: #e0e0e0;
+  --success-color: #50e3c2;
+  --warning-color: #f8e71c;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --border-radius: 16px;
+  --transition: all 0.3s ease;
+}
+
+[data-theme='dark'] {
+  --primary-color: #5aa0f2;
+  --secondary-color: #f7b955;
+  --background-color: #121212;
+  --card-background: #1e1e1e;
+  --text-color: #ffffff;
+  --text-light: #b0b0b0;
+  --border-color: #333333;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: var(--transition);
+  overflow-x: hidden;
+}
+
+/* 容器 */
+.container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 头部 */
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-top: 20px;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 8px;
+  letter-spacing: 2px;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+/* 主题切换按钮 */
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: var(--card-background);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  color: var(--text-color);
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* 卡片样式 */
+.card {
+  background: var(--card-background);
+  border-radius: var(--border-radius);
+  padding: 30px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+/* 标题 */
+h1,
+h2,
+h3 {
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+/* 表单样式 */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+input,
+button {
+  width: 100%;
+  padding: 18px 14px;
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: var(--transition);
+  background: var(--card-background);
+  /* min-height: 66px; */
+  line-height: normal;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+/* 按钮样式 */
+.btn {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(74, 144, 226, 0.3);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-primary {
+  background: var(--primary-color);
+}
+
+.btn-success {
+  background: var(--success-color);
+}
+
+/* 巨型签到按钮 */
+.sign-in-btn {
+  font-size: 2rem;
+  padding: 60px 20px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 10px 30px rgba(74, 144, 226, 0.4);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.sign-in-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(74, 144, 226, 0.5);
+}
+
+.sign-in-btn:active {
+  transform: scale(0.98);
+}
+
+.sign-in-btn.success {
+  animation: signInSuccess 0.6s ease;
+}
+
+@keyframes signInSuccess {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+/* 倒计时样式 */
+.countdown {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.countdown-title {
+  font-size: 1rem;
+  color: var(--text-light);
+  margin-bottom: 10px;
+}
+
+.countdown-timer {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+/* 状态卡片 */
+.status-card {
+  text-align: center;
+}
+
+.status-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.status-text {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.status-detail {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+/* 联系人列表 */
+.contact-list {
+  margin-top: 20px;
+}
+
+.contact-item {
+  background: var(--background-color);
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-contact-btn {
+  background: var(--background-color);
+  color: var(--primary-color);
+  border: 2px dashed var(--border-color);
+  padding: 15px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.add-contact-btn:hover {
+  border-color: var(--primary-color);
+  background: rgba(74, 144, 226, 0.05);
+}
+
+/* 步骤指示器 */
+.steps {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.step {
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+
+.step-number {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--border-color);
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 8px;
+  font-weight: bold;
+  transition: var(--transition);
+}
+
+.step.active .step-number {
+  background: var(--primary-color);
+  color: white;
+}
+
+.step.completed .step-number {
+  background: var(--success-color);
+  color: white;
+}
+
+/* 页面切换动画 */
+.page {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 成功提示 */
+.success-toast {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--success-color);
+  color: white;
+  padding: 20px 40px;
+  border-radius: 25px;
+  font-weight: bold;
+  box-shadow: var(--shadow);
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: var(--transition);
+}
+
+.success-toast.show {
+  opacity: 1;
+}
+
+/* 响应式设计 */
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .sign-in-btn {
+    font-size: 1.5rem;
+    padding: 40px 20px;
+  }
+
+  .countdown-timer {
+    font-size: 2rem;
+  }
+}
+
+/* uni-input 组件修复 - 解决无法点击问题 */
+uni-input {
+  position: relative;
+  z-index: 999;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+uni-input .uni-input-wrapper {
+  position: relative;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background: var(--card-background);
+  border: 0px solid var(--border-color);
+  border-radius: 12px;
+  transition: var(--transition);
+}
+
+uni-input .uni-input-placeholder {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  /* transform: translateY(-50%); */
+  z-index: 998;
+  color: var(--text-light);
+  font-size: 1rem;
+  pointer-events: none;
+}
+
+uni-input .uni-input-input {
+  position: relative;
+  z-index: 999 !important;
+  width: 100%;
+  padding: 18px 14px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  background: transparent;
+  color: var(--text-color);
+  transition: var(--transition);
+  margin: 0;
+  min-height: 56px;
+  height: auto;
+  box-sizing: border-box;
+  pointer-events: auto;
+  cursor: text;
+  line-height: normal;
+}
+
+uni-input .uni-input-input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+uni-input .uni-input-wrapper:focus-within {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+/* 加载动画 */
+.loading {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 路由过渡动画 */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}

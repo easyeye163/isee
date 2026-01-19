@@ -1,0 +1,56 @@
+// 测试用的 iconfont，可生效
+// @import './iconfont.css';
+
+.test {
+  // 可以通过 @apply 多个样式封装整体样式
+  @apply mt-4 ml-4;
+
+  padding-top: 4px;
+  color: red;
+}
+
+:root,
+page {
+  // iOS设计规范 - 字体配置
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #000000;
+  background-color: #f2f2f7;
+
+  // 修改按主题色，采用iOS风格的蓝色
+  --wot-color-theme: #007aff;
+
+  // 修改按钮背景色
+  --wot-button-primary-bg-color: #007aff;
+
+  // iOS设计规范 - 间距配置
+  --ios-padding-xs: 8px;
+  --ios-padding-sm: 12px;
+  --ios-padding-md: 16px;
+  --ios-padding-lg: 20px;
+  --ios-padding-xl: 24px;
+
+  // iOS设计规范 - 圆角配置
+  --ios-radius-sm: 6px;
+  --ios-radius-md: 12px;
+  --ios-radius-lg: 16px;
+  --ios-radius-full: 9999px;
+}
+
+/*
+border-t-1
+由于uniapp中无法使用*选择器，使用魔法代替*，加上此规则可以简化border与divide的使用，并提升布局的兼容性
+1. 防止padding和border影响元素宽度。 (https://github.com/mozdevs/cssremedy/issues/4)
+2. 允许仅通过添加边框宽度来向元素添加边框。 (https://github.com/tailwindcss/tailwindcss/pull/116)
+3. [UnoCSS]: 允许使用css变量'--un-default-border-color'覆盖默认边框颜色
+*/
+// 这个样式有重大BUG，先去掉！！(2025-08-15)
+// :not(not),
+// ::before,
+// ::after {
+//   box-sizing: border-box; /* 1 */
+//   border-width: 0; /* 2 */
+//   border-style: solid; /* 2 */
+//   border-color: var(--un-default-border-color, #e5e7eb); /* 3 */
+// }

@@ -1,0 +1,57 @@
+{
+  "app": {
+    "name": "宗族亲脉",
+    "welcome": "欢迎来到 宗族亲脉"
+  },
+  "common": {
+    "confirm": "确认",
+    "cancel": "取消",
+    "submit": "提交",
+    "reset": "重置",
+    "save": "保存",
+    "delete": "删除",
+    "edit": "编辑",
+    "add": "添加",
+    "search": "搜索",
+    "back": "返回"
+  },
+  "user": {
+    "login": "登录",
+    "register": "注册",
+    "logout": "退出",
+    "profile": "个人资料",
+    "settings": "设置",
+    "name": "姓名",
+    "gender": "性别",
+    "age": "年龄",
+    "phone": "电话",
+    "email": "邮箱"
+  },
+  "chat": {
+    "send": "发送",
+    "message": "消息",
+    "group_chat": "群聊",
+    "send_image": "发送图片",
+    "send_video": "发送视频",
+    "send_file": "发送文件"
+  },
+  "form": {
+    "family_name": "姓氏",
+    "generation": "字辈",
+    "birth_date": "出生日期",
+    "birth_place": "出生地",
+    "marriage_status": "婚姻状况",
+    "marriage_status_single": "单身",
+    "marriage_status_married": "已婚",
+    "spouse_name": "配偶姓名",
+    "children": "子女"
+  },
+  "tabbar.home": "首页",
+  "tabbar.about": "关于",
+  "tabbar.me": "我的",
+  "i18n.title": "中文标题",
+  "alova.title": "Alova 请求",
+  "weight": "{heavy}公斤",
+  "detail": "{0}cm, {1}公斤",
+  "introduction": "我是 {name},身高:{detail.height},体重:{detail.weight}"
+}

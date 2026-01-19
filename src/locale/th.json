@@ -1,0 +1,47 @@
+{
+  "app": {
+    "name": "สมาคมเลือดสัมพันธ์",
+    "welcome": "ยินดีต้อนรับสู่ สมาคมเลือดสัมพันธ์"
+  },
+  "common": {
+    "confirm": "ยืนยัน",
+    "cancel": "ยกเลิก",
+    "submit": "ส่ง",
+    "reset": "รีเซ็ต",
+    "save": "บันทึก",
+    "delete": "ลบ",
+    "edit": "แก้ไข",
+    "add": "เพิ่ม",
+    "search": "ค้นหา",
+    "back": "กลับ"
+  },
+  "user": {
+    "login": "เข้าสู่ระบบ",
+    "register": "สมัครสมาชิก",
+    "logout": "ออกจากระบบ",
+    "profile": "โปรไฟล์",
+    "settings": "ตั้งค่า",
+    "name": "ชื่อ",
+    "gender": "เพศ",
+    "age": "อายุ",
+    "phone": "โทรศัพท์",
+    "email": "อีเมล"
+  },
+  "chat": {
+    "send": "ส่ง",
+    "message": "ข้อความ",
+    "group_chat": "แชทกลุ่ม",
+    "send_image": "ส่งรูป",
+    "send_video": "ส่งวิดีโอ",
+    "send_file": "ส่งไฟล์"
+  },
+  "form": {
+    "family_name": "นามสกุล",
+    "generation": "รุ่น",
+    "birth_date": "วันเกิด",
+    "birth_place": "สถานที่เกิด",
+    "marriage_status": "สถานะสมรส",
+    "spouse_name": "ชื่อคู่สมรส",
+    "children": "ลูก"
+  }
+}
